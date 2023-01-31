@@ -1,3 +1,8 @@
+const rock = document.querySelector('.rock');
+const paper =  document.querySelector('.paper');
+const scissors =  document.querySelector('.scissors');
+const displayResult = document.querySelector('div');
+
 function getComputerChoice(){
     
     let randomNum = Math.floor(Math.random()*3)+1;
@@ -13,15 +18,29 @@ function getComputerChoice(){
             break;
     }
 }
-function getUserChoice(){
 
-    const userInput = prompt("Type rock, paper, or scissors");
-    return userInput;
+function getUsersChoice(){
+    let userChoice = '';
+     rock.addEventListener('click',() =>{
+       userChoice = "rock";
+       console.log(userChoice);
+   });
+   paper.addEventListener('click',() =>{
+       userChoice = "paper";
+       console.log(userChoice);
+   });
+   scissors.addEventListener('click',() =>{
+        userChoice = "scissors";
+        console.log(userChoice);
+   });
+   return userChoice;
 }
+ 
 function winOrlose(){
-
-    computerChoice = getComputerChoice().toLowerCase();
-    userChoice = getUserChoice().toLowerCase();
+    
+    let computerChoice = getComputerChoice().toLowerCase();
+    console.log('output:' + computerChoice)
+    let userChoice = getUsersChoice();
     if(computerChoice === "rock" && userChoice==="scissors" || computerChoice === "paper"&& userChoice === "rock"|| computerChoice === "scissors" && userChoice === "paper"){
             console.log("Computer Wins!");
             return;
@@ -38,12 +57,8 @@ function winOrlose(){
 }
 
 function play(){
-    for(let i=0;i<5;i++){
-        winOrlose();
-    }
+        winOrlose(); 
 }      
+
+
 play();
-
-
-
-
