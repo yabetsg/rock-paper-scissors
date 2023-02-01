@@ -1,17 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock paper scissors</title>
-        <script src="app.js" defer></script>
+    <script src="app.js" defer></script>
+    <link rel="stylesheet" href="./style.css">
+    <link href='https://fonts.googleapis.com/css?family=Gruppo' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Kalam' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Merienda' rel='stylesheet'>
 </head>
+
 <body>
-    <button class="rock">Rock</button>
-    <button class="paper">Paper</button>
-    <button class="scissors">scissors</button>
-    <div class="result"></div>
-</body> 
- 
+    <header>
+        <h1>Rock Paper Scissors</h1>
+    </header>
+    <section class="score">
+        <ul>
+            <li class="computer">Computer Score: </li>
+            <li class="user">Your Score: </li>
+        </ul>
+    </section>
+    <section class="images-result">
+        <div class="imgs">
+            <img src="./img/rock.png" class="rock"></img>
+            <img src="./img//paper.png" class="paper"></img>
+            <img src="./img//scissors.png" class="scissors"></img>
+        </div>
+        <div class="result">
+            <p class="result-text"></p>
+        </div>
+        <a href="./index.html"><button class="play-again">Play Again</button></a>
+        
+    </section>
+</body>
+
 </html>
